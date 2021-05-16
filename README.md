@@ -1,7 +1,7 @@
 # Humming Sparrow Task
 
 This app is built based on the task given during the selection process for an Intership by Humming Sparrow
-You can find the App apk file in the root directory named as "Task.apk"
+You can find the App apk file in the root directory named as "Task.apk" or go to this link https://github.com/Keshav077/Humming-Sparrow-Task/blob/main/Task.apk
 The main theme of the task is to create a responsive app.
 
 ## Getting Started
