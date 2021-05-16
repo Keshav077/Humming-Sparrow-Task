@@ -12,6 +12,10 @@ class NewsListItem extends StatelessWidget {
   final int index;
   final Size screenSize;
   final Orientation orientation;
+  // final TextStyle textStyle = const TextStyle(
+  //   fontSize: 15,
+  //   color: Colors.grey,
+  // );
 
   @override
   Widget build(BuildContext context) {
@@ -44,14 +48,15 @@ class NewsListItem extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     News.headline,
-                    maxLines: 2,
+                    maxLines: screenSize.height < 700 ? 1 : 2,
                     style: Theme.of(context).textTheme.headline6,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: screenSize.height < 900 ? 4 : 10,
                   ),
                   Text(
                     News.headline,
@@ -59,28 +64,42 @@ class NewsListItem extends StatelessWidget {
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
                   SizedBox(
-                    height: 20,
+                    height: screenSize.height < 700
+                        ? 5
+                        : screenSize.height < 900
+                            ? 9
+                            : 14,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Icon(
                             Icons.date_range_outlined,
                             color: Colors.grey,
-                            size: 20,
+                            size: screenSize.height < 700 ? 17 : 20,
+                          ),
+                          SizedBox(
+                            width: 4,
                           ),
                           Text(
                             News.date,
-                            style: Theme.of(context).textTheme.subtitle1,
+                            style: TextStyle(
+                                color: Colors.grey,
+                                fontWeight: FontWeight.w200,
+                                fontSize: Theme.of(context)
+                                    .textTheme
+                                    .subtitle2
+                                    .fontSize),
                           ),
                         ],
                       ),
                       Container(
                         width: orientation == Orientation.landscape
                             ? screenSize.width * 0.15
-                            : screenSize.width * 0.2,
+                            : screenSize.width * 0.18,
                         height: orientation == Orientation.landscape
                             ? screenSize.height * 0.05
                             : screenSize.height * 0.02,
@@ -94,9 +113,12 @@ class NewsListItem extends StatelessWidget {
                               color: Colors.white, fontWeight: FontWeight.bold),
                         ),
                       ),
-                      Icon(Icons.bookmark_outline_rounded),
+                      Icon(
+                        Icons.bookmark_outline_rounded,
+                        size: screenSize.height < 700 ? 17 : 22,
+                      ),
                       if (orientation == Orientation.landscape)
-                        SizedBox(width: screenSize.width * 0.4),
+                        SizedBox(width: screenSize.width * 0.3),
                     ],
                   )
                 ],

@@ -23,6 +23,7 @@ class AppDrawer extends StatelessWidget {
               ),
               Expanded(
                 child: ListTile(
+                  // tileColor: Colors.grey[100],
                   onTap: () =>
                       Navigator.pushReplacementNamed(context, Home.routeName),
                   title: Text("Home"),
@@ -31,6 +32,7 @@ class AppDrawer extends StatelessWidget {
             ],
           ),
           Divider(
+            color: Colors.black54,
             indent: 10,
             endIndent: 10,
           ),
@@ -49,6 +51,7 @@ class AppDrawer extends StatelessWidget {
             ],
           ),
           Divider(
+            color: Colors.black54,
             indent: 10,
             endIndent: 10,
           ),

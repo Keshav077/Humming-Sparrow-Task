@@ -11,7 +11,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     mqc = MediaQuery.of(context);
     screenSize = Size(mqc.size.width,
@@ -32,20 +31,22 @@ class _HomeState extends State<Home> {
       child: Scaffold(
         appBar: appBar,
         drawer: AppDrawer(),
-        body: OrientationBuilder(builder: (octx, orientation) {
-          return Container(
-            child: ListView.builder(
-              itemBuilder: (ctx, index) {
-                return NewsListItem(
-                  screenSize: screenSize,
-                  orientation: orientation,
-                  index: index,
-                );
-              },
-              itemCount: 5,
-            ),
-          );
-        }),
+        body: OrientationBuilder(
+          builder: (octx, orientation) {
+            return Container(
+              child: ListView.builder(
+                itemBuilder: (ctx, index) {
+                  return NewsListItem(
+                    screenSize: screenSize,
+                    orientation: orientation,
+                    index: index,
+                  );
+                },
+                itemCount: 5,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
