@@ -48,28 +48,28 @@ class NewsListItem extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     News.headline,
                     maxLines: screenSize.height < 700 ? 1 : 2,
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  SizedBox(
-                    height: screenSize.height < 900 ? 4 : 10,
-                  ),
+                  // SizedBox(
+                  //   height: screenSize.height < 900 ? 4 : 10,
+                  // ),
                   Text(
                     News.headline,
                     maxLines: 2,
                     style: Theme.of(context).textTheme.subtitle1,
                   ),
-                  SizedBox(
-                    height: screenSize.height < 700
-                        ? 5
-                        : screenSize.height < 900
-                            ? 9
-                            : 14,
-                  ),
+                  // SizedBox(
+                  //   height: screenSize.height < 700
+                  //       ? 5
+                  //       : screenSize.height < 900
+                  //           ? 9
+                  //           : 14,
+                  // ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -88,7 +88,7 @@ class NewsListItem extends StatelessWidget {
                             News.date,
                             style: TextStyle(
                                 color: Colors.grey,
-                                fontWeight: FontWeight.w200,
+                                fontWeight: FontWeight.w400,
                                 fontSize: Theme.of(context)
                                     .textTheme
                                     .subtitle2
