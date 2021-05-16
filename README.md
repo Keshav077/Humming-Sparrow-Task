@@ -1,6 +1,8 @@
-# humming_sparrow_task
+# Humming Sparrow Task
 
-A new Flutter project.
+This app is built based on the task given during the selection process for an Intership by Humming Sparrow
+You can find the App apk file in the root directory named as "Task.apk"
+The main theme of the task is to create a responsive app.
 
 ## Getting Started
 
@@ -14,3 +16,5 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
